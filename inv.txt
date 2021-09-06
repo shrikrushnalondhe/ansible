@@ -1,8 +1,0 @@
-[demo]
-35.154.244.216
-
-[demo:vars]
-ansible_python_interpreter=/usr/bin/python
-
-[hosts]
-ec2-35-154-244-216.ap-south-1.compute.amazonaws.com     ansible_connection=ssh ansible_user=jenkins
