@@ -1,12 +1,15 @@
 ---
-- hosts: demo
-  become: true
+- name: Apache Installation
+  hosts: demo
+  become_user: root
+  become_method: sudo
+  become: yes
   tasks:
-  - name: Install apache packages 
+  - name: Install apache packages
     yum:
       name: httpd
       state: present
   - name: ensure httpd is running
     service:
-      name: httpd 
+      name: httpd
       state: started
